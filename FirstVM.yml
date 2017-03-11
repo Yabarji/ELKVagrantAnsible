@@ -1,0 +1,10 @@
+---
+- name: Tuto Ansible
+  hosts: all
+  become: true
+  roles:
+    - role: java
+    - role: elastic_common
+    - role: elasticsearch
+    - role: kibana
+...

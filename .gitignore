@@ -1,0 +1,7 @@
+# Utility folders
+.vagrant/
+debFiles/
+
+# retry
+*.retry
+*.log

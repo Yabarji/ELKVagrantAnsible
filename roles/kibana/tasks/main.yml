@@ -1,0 +1,22 @@
+---
+- name: Install Kibana
+  apt:
+    name: kibana
+    update_cache: yes
+
+- name: Enable kibana service
+  service:
+    name: kibana.service
+    state: started
+
+- name: Config file for Kibana
+  template:
+    src: ../templates/kibana.yml.j2
+    dest: /etc/kibana/kibana.yml
+    owner: root
+    group: root
+
+- name: Restart Kibana service
+  service:
+    name: kibana.service
+    state: restarted

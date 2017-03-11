@@ -1,0 +1,19 @@
+---
+- name: Install Logstash
+  apt: deb="/vagrant/debFiles/logstash-5.2.1.deb"
+  sudo: true
+
+#- name: Install Logstash
+#  apt:
+#    name: logstash
+#    update_cache: yes
+
+- name: Enable Logstash service
+  service:
+    name: logstash.service
+    state: started
+
+- name: Restart Logstash service
+  service:
+    name: logstash.service
+    state: restarted
