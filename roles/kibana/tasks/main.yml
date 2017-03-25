@@ -8,6 +8,7 @@
   service:
     name: kibana.service
     state: started
+    enabled: yes
 
 - name: Config file for Kibana
   template:

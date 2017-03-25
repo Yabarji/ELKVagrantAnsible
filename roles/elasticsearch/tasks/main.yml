@@ -8,6 +8,7 @@
   service:
     name: elasticsearch.service
     state: started
+    enabled: yes
 
 - name: Config file for Elasticsearch
   template:
